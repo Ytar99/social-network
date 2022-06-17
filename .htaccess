@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteBase /
+Options All -Indexes
+
+RewriteCond ${REQUEST_URI} ^.+$
+RewriteRule ^resource/(.*)$ resource/$1 [L]
+RewriteRule ^.*$ [NC,L]
+RewriteRule ^.*$ index.php [NC,L]
